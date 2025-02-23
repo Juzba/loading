@@ -1,7 +1,18 @@
-const Coordinates = () => {
-  return (
-    <div>Coordinates</div>
-  )
-}
+import { useState } from "react";
 
-export default Coordinates
+const Coordinates = () => {
+	const [loading, setLoading] = useState(true);
+
+   const api = () =>{
+
+   }
+
+	return (
+      <div>
+         {loading ? <div>Loading</div> : ""}
+      
+      </div>
+   )
+};
+
+export default Coordinates;
