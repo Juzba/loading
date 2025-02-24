@@ -5,7 +5,7 @@ const apiUrl = 'http://api.open-notify.org/iss-now.json'
 
 const Coordinates = () => {
 
-   const{data, loading} = useFetch(apiUrl)
+   const{data: {iss_position} , loading} = useFetch(apiUrl)
 
     return (
         <div className='coordinates'>
@@ -15,8 +15,8 @@ const Coordinates = () => {
                 </div>
             ) : (
                 <div>
-                    <p>{`Latitude: ${data.latitude}`}</p>
-                    <p>{`Longitude: ${data.longitude}`}</p>
+                    <p>{`Latitude: ${iss_position.latitude}`}</p>
+                    <p>{`Longitude: ${iss_position.longitude}`}</p>
                 </div>
             )}
         </div>

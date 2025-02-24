@@ -7,8 +7,8 @@ const useFetch = (url) => {
     useEffect(() => {
         fetch(url)
             .then((i) => i.json())
-            .then(({ iss_position }) => {
-                setData(iss_position);
+            .then((item) => {
+                setData(item);
                 setLoading(false);
             });
     }, [url]);
